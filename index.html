@@ -8,19 +8,115 @@
     <title>Oh My Food!</title>
 </head>
 <body>
+    <!---------- HEADER ---------->
     <header>
         <h1> ohmyfood</h1>
     </header>
+    <main>
+        <!-------  LIEU ----------->
         <div class="lieu">
             <i class="fa-solid fa-location-dot"></i>
-            <p> Paris, Belleville<p>
+            <p class="lieu__texte"> Paris, Belleville</p>
         </div>
+        <!----------- ACCROCHE -------->
         <section class="accroche">
-            <h2>Réservez le menu qui vous convient</h2>
-            <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-            <button type="submit">Explorer nos restaurants</button>
+            <h2 class="accroche__titre">Réservez le menu qui<br> vous convient</h2>
+            <p class="accroche__texte">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+            <button class="accroche__btn" type="submit">Explorer nos restaurants</button>
         </section>
-    
-    
+        <!------------ FONCTIONNEMENT -------->
+        <section class="Fonctionnement">
+
+            <h2 class="Fonctionnement__titre">Fonctionnement</h2>
+
+        <div class="Fonctionnement__ensemble">
+
+            <div class="Fonctionnement__btn">
+            <p class="Fonctionnement__btn--numero">1</p>
+            <i class="Fonctionnement__btn--icone fas fa-mobile-alt"></i>
+            <p class="Fonctionnement__btn--texte">Choisissez un restaurant</p>
+            </div>
+
+            <div class="Fonctionnement__btn">
+            <p class="Fonctionnement__btn--numero">2</p>
+            <i class="Fonctionnement__btn--icone fas fa-list-ul"></i>
+            <p class="Fonctionnement__btn--texte">Composez votre menu</p>
+            </div>
+
+            <div class="Fonctionnement__btn">
+            <p class="Fonctionnement__btn--numero">3</p>
+            <i class="Fonctionnement__btn--icone fas fa-store"></i>
+            <p class="Fonctionnement__btn--texte">Dégustez au restaurant</p>
+        </div>
+        </div>
+        </section>
+        <!----------------- RESTAURANTS ---------->
+        <section class="Restaurants">
+            <h2 class="Restaurants__titre">Restaurants</h2>
+          <div class="Restaurants__ensemble">
+            <article class="Restaurants__card">
+                <a href="la-palette-du-goût.html"></a>
+                <div class="Restaurants__card--img">
+                    <img src="images/restaurants/la palette du gout.jpg" alt="image du restaurant la palette du gout">
+                    <div class="Restaurants__card--img--new">
+                        <p>Nouveau</p>
+                    </div>
+                </div>
+                <div class="Restaurants__card--contenu">
+                    <div class="Restaurants__card--contenu--texte">
+                        <h4>La palette du goût</h4>
+                        <p>Ménilmontant</p>
+                    </div>
+                    <div><i class="fa-regular fa-heart"></i> </div>
+                </div>
+            </article>
+            <article class="Restaurants__card">
+                <a href="la-palette-du-goût.html"></a>
+                <div class="Restaurants__card--img">
+                    <img src="images/restaurants/la note enchante.jpg" alt="image du restaurant la palette du gout">
+                    <div class="Restaurants__card--img--new">
+                        <p>Nouveau</p>
+                    </div>
+                </div>
+                <div class="Restaurants__card--contenu">
+                    <div class="Restaurants__card--contenu--texte">
+                        <h4>La note enchantée</h4>
+                        <p>Charonne</p>
+                    </div>
+                    <div><i class="fa-regular fa-heart"></i> </div>
+                </div>
+            </article>
+            <article class="Restaurants__card">
+                <a href="la-palette-du-goût.html"></a>
+                <div class="Restaurants__card--img">
+                    <img src="images/restaurants/a la francaise.jpg" alt="image du restaurant la palette du gout">
+                </div>
+                <div class="Restaurants__card--contenu">
+                    <div class="Restaurants__card--contenu--texte">
+                        <h4>À la française</h4>
+                        <p>Cité Rouge</p>
+                    </div>
+                    <div><i class="fa-regular fa-heart"></i> </div>
+                </div>
+            </article>
+            <article class="Restaurants__card">
+                <a href="la-palette-du-goût.html"></a>
+                <div class="Restaurants__card--img">
+                    <img src="images/restaurants/le delice des sens .jpg" alt="image du restaurant la palette du gout">
+                </div>
+                <div class="Restaurants__card--contenu">
+                    <div class="Restaurants__card--contenu--texte">
+                        <h4>Le délice des sens</h4>
+                        <p>Folie-Méricourt</p>
+                    </div>
+                    <div><i class="fa-regular fa-heart"></i> </div>
+                </div>
+            </article>
+        </div>
+            
+        </section>
+    </main>
+    <!----------------- FOOTER--------------->
+    <footer></footer>  
 </body>
 </html>
