@@ -23,6 +23,8 @@ a {
   font-family: "Roboto", serif;
 }
 
+/***** variables ********/
+/****** mixins **********/
 /******* Header ********/
 header {
   margin: 0;
@@ -69,7 +71,7 @@ header {
 .accroche__texte {
   font-size: 18px;
   font-weight: 200;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", serif;
 }
 
 .accroche__btn {
