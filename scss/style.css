@@ -104,7 +104,6 @@ header {
   cursor: pointer;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
-
 .accroche__btn:hover {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   transition-duration: 0.25s;
@@ -316,6 +315,43 @@ header {
   top: 76%;
   right: 7%;
   font-size: 25px;
+}
+
+.fa-heart::before {
+  content: "\f004";
+}
+
+.coeur__btn::after {
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 25px;
+  content: "\f004";
+  color: transparent;
+  background: linear-gradient(357deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transform-origin: bottom;
+  -webkit-text-stroke: 1px;
+}
+
+.coeur__btn {
+  width: 28px;
+  z-index: 0;
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-size: 25px;
+  padding: 0;
+  border: transparent 0px solid;
+  background-color: transparent;
+  -webkit-text-stroke: 1px white;
+  cursor: pointer;
 }
 
 .page__img {
