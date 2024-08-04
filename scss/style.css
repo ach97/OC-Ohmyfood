@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
@@ -29,6 +30,85 @@ p {
 
 /***** variables ********/
 /****** mixins **********/
+/********** Loading spinner *****/
+.spinner {
+  color: whitesmoke;
+}
+
+.spinner,
+.spinner:after {
+  box-sizing: border-box;
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: linear-gradient(357deg, #9356DC, #FF79DA);
+  opacity: 0.8;
+}
+
+.spinner:after {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6.4px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
+  animation: spinner 1.2s ease-in-out infinite;
+  background-color: linear-gradient(357deg, #9356DC, #FF79DA);
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: linear-gradient(357deg, #9356DC, #FF79DA);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  animation: fade;
+  animation-duration: 0s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -100;
+    display: none;
+    height: 0;
+    width: 0;
+    -webkit-clip-path: circle(0);
+            clip-path: circle(0); /* rognage de la totalité donc disparition*/
+  }
+}
 /******* Header ********/
 header {
   margin: 0;
@@ -107,6 +187,7 @@ header {
 .accroche__btn:hover {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   transition-duration: 0.25s;
+  opacity: 0.8;
 }
 
 /********* Fonctionnement *********/
@@ -315,43 +396,20 @@ header {
   top: 76%;
   right: 7%;
   font-size: 25px;
+  transition-property: all;
 }
 
-.fa-heart::before {
-  content: "\f004";
-}
-
-.coeur__btn::after {
-  z-index: -1;
+.fa-solid {
   opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 25px;
-  content: "\f004";
-  color: transparent;
-  background: linear-gradient(357deg, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  background-clip: text;
-  transform-origin: bottom;
-  -webkit-text-stroke: 1px;
 }
 
-.coeur__btn {
-  width: 28px;
-  z-index: 0;
-  position: relative;
-  font-family: "Font Awesome 5 Free";
-  font-size: 25px;
-  padding: 0;
-  border: transparent 0px solid;
-  background-color: transparent;
-  -webkit-text-stroke: 1px white;
-  cursor: pointer;
+.fa-solid:hover {
+  opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  transition-duration: 2s;
 }
 
 .page__img {
@@ -400,7 +458,6 @@ header {
 
 @media all and (min-width: 1024px) {
   .page__menu--devanture {
-    width: 400px;
     height: 41px;
     justify-content: center;
   }
@@ -409,7 +466,6 @@ header {
   display: flex;
   /*align-items: center;*/
   font-size: 35px;
-  width: 95%;
   font-family: "Shrikhand", serif;
 }
 
@@ -444,6 +500,20 @@ header {
   background-color: #99E2D0;
 }
 
+.page__menu--anim {
+  animation: fadein 4s;
+  -moz-animation: fadein 4s; /* Firefox */
+  -webkit-animation: fadein 4s; /* Safari et Chrome */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .page__card {
   display: flex;
   justify-content: space-between;
