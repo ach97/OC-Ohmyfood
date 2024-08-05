@@ -399,17 +399,19 @@ header {
   transition-property: all;
 }
 
-.fa-solid {
+.heartfill {
   opacity: 0;
+  font-size: 25px;
 }
 
-.fa-solid:hover {
+.heartfill:hover {
   opacity: 1;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-size: 25px;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  transition-duration: 2s;
+  transition-duration: 1s;
 }
 
 .page__img {
@@ -471,7 +473,21 @@ header {
 }
 
 .page__menu--devanture i {
-  height: 21px;
+  height: 25px;
+  position: absolute;
+  top: 5.5%;
+  right: auto;
+  font-size: 25px;
+  transition-property: all;
+}
+
+@media all and (min-width: 1024px) {
+  .page__menu--devanture i {
+    top: 3%;
+  }
+}
+.fa-regular {
+  font-size: 25px;
 }
 
 .page__menu--menu {
