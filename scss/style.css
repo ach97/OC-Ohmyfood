@@ -453,13 +453,14 @@ header {
   padding: 1rem 2rem 0 1rem;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   margin: auto;
 }
 
 @media all and (min-width: 1024px) {
   .page__menu--devanture {
     height: 41px;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 }
 .page__menu--devanture h2 {
@@ -515,38 +516,123 @@ header {
   }
 }
 .page__card {
+  /* display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   padding: 10px 20px;
+   font-family: "Roboto", serif;
+   background-color: whitesmoke;
+   border-radius: 15px;
+   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+   margin: 0 10px;
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;*/
+  position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  padding: 10px 20px;
-  font-family: "Roboto", serif;
-  background-color: whitesmoke;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 0;
+  background-color: #ffffff;
   border-radius: 15px;
-  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
-  margin: 0 10px;
+  box-shadow: 0 4px 10px 0 #d5d5d5;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.page__card--info {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  width: 100%;
+  margin: 2%;
+  gap: 2%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Roboto", serif;
 }
 
 .page__card--texte {
-  gap: 5px;
-  font-family: "Roboto", serif;
+  /*gap: 5px;
+  font-family: $font-texte;*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  padding: 5px;
 }
 
 .page__card--texte h4 {
-  margin: 2px 0 7px 0;
-  font-size: 18px;
-  font-family: "Roboto", serif;
+  /* margin: 2px 0 7px 0;
+   font-size: 18px;
+   font-family: $font-texte;
+   font-weight: 500;
+   font-size: 19px;*/
+  margin: 0;
+  font-size: 16px;
   font-weight: 500;
-  font-size: 19px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .page__card--texte p {
+  /*font-weight: 300;
+  font-family: $font-texte;*/
+  margin: 0;
   font-weight: 300;
-  font-family: "Roboto", serif;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .page__card--prix {
-  font-family: "Roboto", serif;
+  /*font-family: $font-texte;
+  font-weight: 500;*/
+  display: flex;
+  align-items: flex-end;
+  width: 15%;
+  padding: 5px;
+}
+
+.page__card--prix p {
+  margin: 0;
   font-weight: 500;
+}
+
+.page__card--check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 20%;
+  margin-right: -20%;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #99E2D0;
+  transition: margin-right 800ms cubic-bezier(0.63, 1.23, 0.96, 0.92);
+}
+
+.page__card:hover > .page__card--check {
+  margin-right: 0px;
+}
+
+.page__card--check:after {
+  display: inline-block;
+  margin: auto;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 25px;
+  content: "\f058";
+  color: #ffffff;
+  transition: transform 800ms cubic-bezier(0.63, 1.23, 0.96, 0.92);
+  position: absolute;
+}
+
+.page__card:hover > .page__card--check::after {
+  transform: rotate(360deg);
 }
 
 .page__menu--btn {
