@@ -1,0 +1,74 @@
+.spinner {
+      color: whitesmoke;
+      }
+      &,&:after {
+        box-sizing: border-box;
+      }
+      .spinner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background: $gradient;
+        opacity: 0.8;
+      
+        &:after {
+            content: " ";
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6.4px solid currentColor;
+            border-color: currentColor transparent currentColor transparent;
+            animation: spinner 1.2s ease-in-out infinite;
+            background: $gradient;
+        @keyframes spinner {
+            0% {
+            transform: rotate(0deg);
+            }
+            100% {
+            transform: rotate(360deg);
+            }
+        }
+    }
+}
+.loader {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $gradient;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        z-index: 1000;
+        height: 100%;
+        width: 100%;
+        opacity:1;
+        animation: fade;
+        animation-duration: 0s;
+        animation-delay:2s;
+        animation-fill-mode: forwards;
+ 
+        @keyframes fade {
+            from{
+                opacity:1;
+                }
+                to{
+                    opacity:0;
+                    z-index:-100;
+                    display:none;
+                    height:0;
+                    width:0;
+                    clip-path:circle(0);/* rognage de la totalité donc disparition*/
+                }
+                }
+     
+            }
